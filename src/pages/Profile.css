@@ -1,0 +1,48 @@
+.profile-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.profile-right-col {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.profile-header-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.profile-avatar-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Activity grid */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 4px;
+}
+
+.activity-cell {
+  aspect-ratio: 1;
+  border-radius: 3px;
+  background: var(--border);
+}
+.activity-cell.intensity-0 { background: var(--border); }
+.activity-cell.intensity-1 { background: #c6efce; }
+.activity-cell.intensity-2 { background: #8dd9a4; }
+.activity-cell.intensity-3 { background: var(--green-light); }
+
+@media (max-width: 1000px) {
+  .profile-right-col { width: 240px; }
+}
+@media (max-width: 800px) {
+  .profile-layout { flex-direction: column; }
+  .profile-right-col { width: 100%; }
+}

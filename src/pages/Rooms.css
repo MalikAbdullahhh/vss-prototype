@@ -1,0 +1,24 @@
+.rooms-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.rooms-main { flex: 1; min-width: 0; }
+.rooms-panel {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.rooms-room-card {
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.rooms-room-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+@media (max-width: 1000px) {
+  .rooms-layout { flex-direction: column; }
+  .rooms-panel { width: 100%; }
+}

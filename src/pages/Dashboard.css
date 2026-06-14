@@ -1,0 +1,41 @@
+.dashboard-banner {
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.dashboard-banner-text h2 { font-size: 22px; font-weight: 800; margin-bottom: 4px; }
+.dashboard-banner-text p { font-size: 13px; opacity: 0.85; }
+.dashboard-banner-deco {
+  position: absolute;
+  right: 80px;
+  bottom: -10px;
+  font-size: 80px;
+  opacity: 0.25;
+}
+
+.dashboard-room-card {
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.dashboard-room-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.dashboard-tool-card {
+  cursor: pointer;
+  text-align: center;
+  padding: 24px 16px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.dashboard-tool-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  background: var(--green-bg);
+}

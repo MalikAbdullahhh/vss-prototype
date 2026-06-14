@@ -1,0 +1,139 @@
+.auth-page {
+  min-height: 100vh;
+  background: #f8f8f8;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 20px;
+}
+
+.auth-back {
+  position: absolute;
+  top: 20px; right: 24px;
+  background: var(--white);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  font-size: 13px; font-weight: 600;
+  color: var(--text);
+  z-index: 10;
+}
+.auth-back:hover { background: var(--bg); }
+
+/* Doodle characters */
+.auth-doodle {
+  position: absolute;
+  font-size: 52px;
+  filter: grayscale(0.3);
+}
+.auth-doodle-1 { top: 80px; left: 60px; }
+.auth-doodle-2 { top: 80px; right: 120px; }
+.auth-doodle-3 { bottom: 100px; left: 80px; }
+.auth-doodle-4 { bottom: 100px; right: 80px; }
+
+.auth-star {
+  position: absolute;
+  font-size: 24px;
+}
+.auth-star-1 { top: 140px; left: 200px; }
+.auth-star-2 { bottom: 160px; right: 200px; }
+
+/* Speech bubbles like the Figma design */
+.auth-bubble {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.35;
+}
+.auth-bubble-1 {
+  width: 80px; height: 60px;
+  background: #f9c5e7;
+  top: 200px; left: 30px;
+  border-radius: 50% 50% 50% 10%;
+}
+.auth-bubble-2 {
+  width: 70px; height: 50px;
+  background: #c5f0c8;
+  top: 160px; right: 50px;
+  border-radius: 50% 50% 10% 50%;
+}
+.auth-bubble-3 {
+  width: 60px; height: 45px;
+  background: #c8d9f9;
+  bottom: 200px; left: 140px;
+  border-radius: 50%;
+}
+
+.auth-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 36px 40px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: var(--shadow-lg);
+  border: 1.5px solid var(--border);
+  position: relative;
+  z-index: 5;
+}
+
+.auth-title {
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.auth-divider {
+  display: flex; align-items: center; gap: 12px;
+  margin: 16px 0;
+  color: var(--text-3);
+  font-size: 12px;
+}
+.auth-divider::before, .auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.auth-switch {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.auth-switch a { color: var(--green); font-weight: 600; }
+.auth-switch a:hover { text-decoration: underline; }
+
+.auth-footer {
+  margin-top: 24px;
+  font-size: 12px;
+  color: var(--text-3);
+  z-index: 5;
+}
+
+/* Checkbox group */
+.auth-checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-top: 6px;
+}
+.auth-checkbox-item {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; cursor: pointer;
+}
+.auth-checkbox-item input { accent-color: var(--green); }
+
+@media (max-width: 600px) {
+  .auth-doodle { display: none; }
+  .auth-bubble { display: none; }
+  .auth-star { display: none; }
+  .auth-card { padding: 24px 20px; }
+}
